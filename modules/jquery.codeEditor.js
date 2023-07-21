@@ -770,6 +770,15 @@
 			},
 
 			/**
+			 * Replace the current selection with the given text.
+			 * Do not call this directly, use $.textSelection( 'functionname', options ) instead.
+			 * @param {string} text
+			 */
+			replaceSelection: function ( text ) {
+				context.codeEditor.insert( text );
+			},
+
+			/**
 			 * Gets the position (in resolution of bytes not nessecarily characters) in a textarea
 			 * DO NOT CALL THIS DIRECTLY, use $.textSelection( 'functionname', options ) instead
 			 */
